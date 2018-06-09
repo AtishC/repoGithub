@@ -21,6 +21,8 @@ db.School.insert({"Roll":"1"},{"Name":"Sam"})
 
 db.school.drop()
 
+Data Insert Techinique , use JSON format {} denotes each document record whereas [] indicates that we are inserting an array of documents
+
 db.school.insert(
 [
 {
@@ -34,9 +36,39 @@ db.school.insert(
 ]
 )
 
+Data Extraction strategies
 
 db.school.find()
 
 db.school.find().pretty()
+
+db.school.find({"name":"sam"})
+
+db.school.find({"roll":{$gt:"1"} })
+
+db.school.find({"roll":{$gte:"1"} })
+
+db.school.find({"roll":{$lte:"2"} })
+
+db.school.find({"roll":{$ne:"2"} }).pretty()
+
+AND operation
+
+db.school.find({"name":"sam","roll":"1"})
+
+OR Operation
+
+db.school.find(
+{
+  $or:[{"roll":"1"},{"roll":"3"}]
+}
+)
+
+db.school.find(
+{
+"roll":{$gte:"1"},$or:[{"name":"sam"},{"name":"ed"}]
+}
+)
+
 
 
