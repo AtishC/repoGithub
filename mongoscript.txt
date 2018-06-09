@@ -46,7 +46,7 @@ db.school.find({"name":"sam"})
 
 db.school.find({"roll":{$gt:"1"} })
 
-db.school.find({"roll":{$gte:"1"} })
+db.school.find({"roll" : {$gte:"1"} })
 
 db.school.find({"roll":{$lte:"2"} })
 
@@ -71,4 +71,34 @@ db.school.find(
 )
 
 
+db.school.insert(
+[
+{"roll":"5","name":"ben"},
+{"roll":"6","name":"jos"}
+]
+)
 
+db.school.update
+(
+{"_id" : ObjectId("5b1bf3f99eacf1093803c0fd")},{$set:{"subject":"history"}}
+)
+
+db.school.update
+(
+{"roll":{$gte:"1"}},{$set:{"subject":"cricket"}},{multi:true, writeConcern: { w: "majority", wtimeout: 5000 }}
+)
+
+db.school.update
+(
+{"roll":{$gte:"1"}},{$set:{"status":"selected"}},{multi:true}
+)
+
+db.school.update
+(
+{"roll":{$lte:"3"}},{$set:{"role model":"Sachin"}},{multi:true}
+)
+
+db.school.find()
+
+db.school.updateMany
+({"_id" : ObjectId("5b1bf3f99eacf1093803c0fe")},{$set:{"name":"edward"}})
