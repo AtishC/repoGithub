@@ -1,1 +1,3 @@
-i am a beginner in python
+i am a beginner in python. today i bought a book from amazon.
+
+want to learn machine learning step by step
