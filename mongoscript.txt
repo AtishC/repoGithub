@@ -1,0 +1,42 @@
+Database --> Collection --> Document
+use mydb
+
+db
+
+show dbs
+
+db
+
+db.mycollection.insert({"name":"Atish"})
+
+db.createCollection("School")
+
+show collections
+
+db.mycollection.drop()
+
+show collections
+
+db.School.insert({"Roll":"1"},{"Name":"Sam"})
+
+db.school.drop()
+
+db.school.insert(
+[
+{
+  "roll":"3",
+  "name":"steve"
+},
+{
+  "roll":"4",
+  "name":"chris"
+}
+]
+)
+
+
+db.school.find()
+
+db.school.find().pretty()
+
+
