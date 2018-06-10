@@ -100,5 +100,29 @@ db.school.update
 
 db.school.find()
 
-db.school.updateMany
-({"_id" : ObjectId("5b1bf3f99eacf1093803c0fe")},{$set:{"name":"edward"}})
+db.school.stats()
+
+db.school.insert(
+{
+  "roll":"8","name":"joe"
+})
+
+db.school.update
+( {"roll":{$gt:"6"} } , 
+  {$set: {"subject":"cricket","status":"selected","role model":"Lara"} } ,
+  {multi:true}
+ )
+ 
+db.school.save({"roll":"9","name":"rishav","subject":"cricket","status":"selected","role model":"Lara"}) 
+
+db.school.remove({"roll":"9"})
+
+db.school.findOne()
+db.school.find()
+db.school.getShardVersion()
+db.school.getShardDistribution()
+
+db.school.find({},{"name":1,"subject":1,"role model":1,"_id":0})
+
+
+db.school.getIndexes()
