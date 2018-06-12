@@ -117,12 +117,24 @@ db.school.save({"roll":"9","name":"rishav","subject":"cricket","status":"selecte
 
 db.school.remove({"roll":"9"})
 
+db
+
 db.school.findOne()
 db.school.find()
 db.school.getShardVersion()
 db.school.getShardDistribution()
+db.school.getIndexes()
 
 db.school.find({},{"name":1,"subject":1,"role model":1,"_id":0})
 
+db.school.find({},{"name":1,"subject":1,"role model":1,"_id":0}).limit(4)
 
-db.school.getIndexes()
+db.school.find({},{"name":1,"subject":1,"role model":1,"_id":0}).skip(3)
+
+db.school.find({},{"name":1,"subject":1,"role model":1,"_id":0}).skip(3).limit(2)
+
+db.school.find({},{"name":1,"subject":1,"role model":1,"_id":0}).sort({"name":1})
+db.school.find({},{"name":1,"subject":1,"role model":1,"_id":0}).sort({"name":-1})
+
+
+
