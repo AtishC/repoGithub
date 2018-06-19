@@ -1,0 +1,11 @@
+print("hello world")
+
+a=7 #assigns a variable
+print(a)
+print(a+8)
+
+print(type(a)) #prints the type of the variable
+print(type(9.1))
+print(type("hello"))
+
+print(18/5)  #carries out floating point division
