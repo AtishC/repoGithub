@@ -1,0 +1,31 @@
+s = 'a,b,c,d,e,fgh'
+print(s.split(','))             #Returns a list of objects
+
+l1 = s.split(',')               #Assigns l1 to a list returned by split function
+print(l1)
+
+#    Lists & Tuples are sequence structures which can hold zero or more elements. Elements in a list/tuple can
+#    be of different types or any python object. Lists are mutable objects whereas Tuples are immutable.
+
+empty_list = []
+week_list  = ['Monday','Tuesday','Wednesday','Thursday','Friday']
+
+l2 = list('cat')                #Converts a string to a List
+print(l2)
+
+print(week_list[0],' ',week_list[1])    #List items invoked with Offset
+
+week_list.append('Saturday')    #Appending elements to a list
+print(week_list)
+week_list.reverse()             #Reverses a List
+print(week_list)
+
+fauna = [['Treepie','Eagle','Paradise Flycatcher','Monarch'],['Cheetal','Elephant','Tiger','Leopard']]
+print(fauna)                    #List of lists
+print(fauna[1])
+print(fauna[1][2])
+
+copy_week = week_list.copy()    #Copies a list
+print(copy_week)
+copy_week.clear()
+print(copy_week)

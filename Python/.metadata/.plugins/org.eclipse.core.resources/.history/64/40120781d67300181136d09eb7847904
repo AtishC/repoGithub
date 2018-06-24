@@ -1,5 +1,0 @@
-print("hello world")
-
-a=7
-print(a)
-print(a+8)

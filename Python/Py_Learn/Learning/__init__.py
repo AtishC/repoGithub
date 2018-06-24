@@ -30,6 +30,10 @@ print(s[10:20:2])   #Extracts from start offset to end offset value minus 1 with
 print(s[-3:])       #Extracts 3 characters from end
 print(s[-10:20])
 
+s="abcdefg"
+print(s)
+print(s[::-1])      #Reverse a string
+print(s[5:2:-1])
 
 
 

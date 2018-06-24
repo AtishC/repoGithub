@@ -1,0 +1,4 @@
+s = 'a,b,c,d,e,fgh'
+print(s.split(','))             #Returns a list of objects
+
+l1 = s.split(',')
